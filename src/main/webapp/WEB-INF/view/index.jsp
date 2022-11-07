@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="container py-5">
-		<form action="/member/auth" method="post">
+		<form action="/user/auth" method="post">
 			<div class="row justify-content-center align-items-center">
 				<div class="col-2 text-end">
 					<label for="username">아이디: </label>
@@ -33,7 +33,7 @@
 					<button type="submit" class="btn btn-outline-success">로그인하기</button>
 				</div>
 				<div class="col-3 justify-content-center">
-					<a href="/member/register" class="btn btn-outline-primary">가입하기</a>
+					<a href="/user/register" class="btn btn-outline-primary">가입하기</a>
 				</div>
 			</div>
 		</form>
