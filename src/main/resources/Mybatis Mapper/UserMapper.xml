@@ -8,5 +8,24 @@
         AND `password` = #{password}
     </select>
 
+    <select id="validateUsername" parameterType="userDTO" resultType="userDTO">
+        SELECT * FROM `user`
+        WHERE `username` = #{username}
+    </select>
 
+    <insert id="register" parameterType="userDTO">
+        INSERT INTO `user` (
+    </insert>
+
+    <update id="update" parameterType="userDTO">
+        UPDATE `user` SET
+        `password` = #{password},
+        `nickname` = #{nickname}
+        WHERE `id` = #{id}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM `user`
+        WHERE `id` = #{id}
+    </delete>
 </mapper>
