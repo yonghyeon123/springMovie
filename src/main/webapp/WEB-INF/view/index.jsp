@@ -10,28 +10,33 @@
 <c:import url="classpath:static/importer.html" />
 </head>
 <body>
-	<div class="container py-5">
+	<div class="container py-5 col-8" >
 		<form action="/user/auth" method="post">
 			<div class="row justify-content-center align-items-center">
 				<div class="col-2 text-end">
 					<label for="username">아이디: </label>
 				</div>
+				
 				<div class="col-4">
 					<input class="form-control" name="username">
 				</div>
 			</div>
+			
 			<div class="row justify-content-center align-items-center mt-2">
 				<div class="col-2 text-end">
 					<label for="password">비밀번호: </label>
 				</div>
+				
 				<div class="col-4">
 					<input class="form-control" name="password">
 				</div>
 			</div>
+			
 			<div class="row justify-content-center align-items-center mt-4">
 				<div class="col-3 text-end">
 					<button type="submit" class="btn btn-outline-success">로그인하기</button>
 				</div>
+				
 				<div class="col-3 justify-content-center">
 					<a href="/user/register" class="btn btn-outline-primary">가입하기</a>
 				</div>

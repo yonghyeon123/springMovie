@@ -24,7 +24,7 @@ public class UserController {
 
         if(logIn != null){
             session.setAttribute("logIn", logIn);
-            return "movie/showAll/1";
+            return "redirect:/movie/showAll";
         }
         else{
             return "redirect:/";
@@ -40,14 +40,25 @@ public class UserController {
     public String register(UserDTO userDTO, Model model){
         //username이 중복인 아이디가 없다면
         if(!service.validateUsername(userDTO)){
-            //회원가입 진행
-            service.register(userDTO);
-            return "redirect:/";
+            model.addAttribute("message", "해당 아이디가 이미 존재합니다.");
+            model.addAttribute("userDTO", userDTO);
+
+            return "user/register";
         }
-        else{
-            return "redirect:/user/register";
-        }
+
+        service.register(userDTO);
+        return "redirect:/";
     }
 
+    @GetMapping("index")
+    public String showIndex(HttpSession session, Model model){
+        UserDTO logIn = (UserDTO) session.getAttribute("logIn");
+        if(logIn == null){
+            return "redirect:/";
+        }
 
+        model.addAttribute("logIn", logIn);
+
+        return "/user/index";
+    }
 }

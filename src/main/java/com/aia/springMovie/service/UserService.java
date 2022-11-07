@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 public class UserService {
     @Autowired
     private SqlSession session;
-    private final String NAMESPACE = "springMovie.Mapper";
+    private final String NAMESPACE = "springMovie.UserMapper";
 
     /**
      * 로그인 메소드
