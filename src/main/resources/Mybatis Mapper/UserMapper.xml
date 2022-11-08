@@ -14,7 +14,8 @@
     </select>
 
     <insert id="register" parameterType="userDTO">
-        INSERT INTO `user` (
+        INSERT INTO `user` (`username`, `password`, `nickname`, `grade`)
+        VALUES (#{username}, #{password}, #{nickname}, #{grade})
     </insert>
 
     <update id="update" parameterType="userDTO">

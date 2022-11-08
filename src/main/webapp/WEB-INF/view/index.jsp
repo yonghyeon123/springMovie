@@ -33,11 +33,11 @@
 			</div>
 			
 			<div class="row justify-content-center align-items-center mt-4">
-				<div class="col-3 text-end">
+				<div class="col-2 text-end">
 					<button type="submit" class="btn btn-outline-success">로그인하기</button>
 				</div>
 				
-				<div class="col-3 justify-content-center">
+				<div class="col-2 justify-content-center">
 					<a href="/user/register" class="btn btn-outline-primary">가입하기</a>
 				</div>
 			</div>
