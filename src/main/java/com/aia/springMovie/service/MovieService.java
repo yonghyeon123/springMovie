@@ -20,4 +20,8 @@ public class MovieService {
         limits.put("size", size);
         return session.selectList(NAMESPACE + ".selectAll", limits);
     }
+
+    public int countAll(){
+        return session.selectOne(NAMESPACE + ".countAll");
+    }
 }

@@ -28,7 +28,7 @@
 				</div>
 				
 				<div class="col-4">
-					<input class="form-control" name="password">
+					<input class="form-control" type="password" name="password">
 				</div>
 			</div>
 			

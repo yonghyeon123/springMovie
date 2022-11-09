@@ -25,7 +25,29 @@
 		
 		<div class="row justify-content-center align-items-center">
 			<div class="col-8">
-				
+				<div class="table-responsive">
+					<table class="table table-striped table-hover text-center align-middle">
+						<thead>
+							<tr>
+								<th class="col-1">번호</th>
+								<th class="col-3">제목</th>
+								<th class="col-2">시청등급</th>
+								<th class="col-2">평점</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<c:forEach items="${list}" var="movie">
+								<tr onclick="location.href='/movie/showOne/${movie.id}'">
+									<td>${movie.id }</td>
+									<td>${movie.title }</td>
+									<td>${movie.degree }</td>
+									<td>0.0</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>

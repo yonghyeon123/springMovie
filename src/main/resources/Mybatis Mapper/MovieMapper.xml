@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="springMovie.UserMapper">
+<mapper namespace="springMovie.MovieMapper">
     <select id="selectAll" parameterType="hashMap" resultType="hashMap">
-        SELECT m.`id`, m.`title`, m.`storyLine`, m.`degree`, AVG(r.`rating`) FROM `movie` AS m
-        INNER JOIN `rate` AS r
-        ON m.`id` = r.`movieId`
+        SELECT m.`id`, m.`title`, m.`storyLine`, m.`degree` FROM `movie` AS m
         ORDER BY m.`id` DESC
         LIMIT ${start}, ${size}
+    </select>
+
+    <select id="countAll" resultType="int">
+        SELECT COUNT(`id`) FROM `movie`
     </select>
 </mapper>

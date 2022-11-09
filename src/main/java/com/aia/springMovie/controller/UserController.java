@@ -23,7 +23,7 @@ public class UserController {
 
         if(logIn != null){
             session.setAttribute("logIn", logIn);
-            return "redirect:/movie/showAll";
+            return "redirect:/movie/showAll/1";
         }
         else{
             return "redirect:/";
